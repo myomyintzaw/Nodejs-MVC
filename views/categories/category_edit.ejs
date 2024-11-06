@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+    <form action="/categories/edit/<%= category.id %>" method="POST" class="w-50 m-auto p-5 mt-5 shadow">
+        <h2>Edit Category</h2>
+
+        <div class="mb-3">
+            <input type="text" placeholder="Category name ..." value="<%= category.name %>" name="name"
+                class="form-control" required>
+        </div>
+
+
+        <button type="submit" class="btn btn-info">Update Category</button>
+    </form>
+
+    <%- include('../partials/footer') %>

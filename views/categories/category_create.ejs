@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+    <form action="/categories/create" method="POST" class="w-50 p-5 mt-5 shadow m-auto">
+        <h2>Create New Cateory</h2>
+
+        <div class="mb-3">
+            <input type="text" name="name" placeholder="Write Down Cateory Name..." class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-secondary">Create</button>
+
+
+
+    </form>
+
+
+    <%- include('../partials/footer') %>

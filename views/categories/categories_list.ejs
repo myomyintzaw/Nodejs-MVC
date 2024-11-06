@@ -1,0 +1,43 @@
+<%- include('../partials/header') %>
+
+    <div class="container-fluid">
+
+
+        <h1><u>Cateory List</u></h1>
+
+        <a href="/categories/create" class="btn btn-primary"> Create New Category</a>
+
+        <div class="w-25 m-auto m-1">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"> Cateory Name</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <% categories.forEach(category=> { %>
+                        <tr>
+                            <th scope="row">
+                                <%= category.name %>
+                            </th>
+                            <td><a href="categories/edit/<%= category.id %>" class="btn btn-warning">Edit</a>
+
+                                <form action="/categories/delete/<%= category.id %>" method="POST"
+                                    style="display:inline;">
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+
+                                </form>
+
+                            </td>
+                        </tr>
+                        <% }) %>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <%- include('../partials/footer') %>
